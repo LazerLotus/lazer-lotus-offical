@@ -1,23 +1,26 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import BaseLayout from './layouts/BaseLayout'
+import BelieverTestimonialsPage from './pages/BelieverTestimonialsPage'
+import BubbleTeaMethodPage from './pages/BubbleTeaMethodPage'
+import DemagnetizingBubbleTeaPage from './pages/DemagnetizingBubbleTeaPage'
+import DharmaDeclarationPage from './pages/DharmaDeclarationPage'
+import DivorceCeremonyPage from './pages/DivorceCeremonyPage'
+import EnlightenmentVideoPage from './pages/EnlightenmentVideoPage'
+import GreatUniverseHedgehogPage from './pages/GreatUniverseHedgehogPage'
 import HomePage from './pages/HomePage'
-import UnderstandingTeachingsPage from './pages/UnderstandingTeachingsPage'
-import ReligiousPrinciplesPage from './pages/ReligiousPrinciplesPage'
+import HowToSenseEnergyPage from './pages/HowToSenseEnergyPage'
 import LazerLotusPage from './pages/LazerLotusPage'
 import LazerMasterPage from './pages/LazerMasterPage'
+import MarriageCeremonyPage from './pages/MarriageCeremonyPage'
+import ReligiousPrinciplesPage from './pages/ReligiousPrinciplesPage'
+import SpiritAnimalIntroductionPage from './pages/SpiritAnimalIntroductionPage'
 import SpiritAnimalsPage from './pages/SpiritAnimalsPage'
 import SpiritualMonkeyPage from './pages/SpiritualMonkeyPage'
-import GreatUniverseHedgehogPage from './pages/GreatUniverseHedgehogPage'
 import SpiritualPelicanPage from './pages/SpiritualPelicanPage'
+import UnderstandingTeachingsPage from './pages/UnderstandingTeachingsPage'
 import WeddingCeremoniesPage from './pages/WeddingCeremoniesPage'
 import WeddingIntroductionPage from './pages/WeddingIntroductionPage'
-import MarriageCeremonyPage from './pages/MarriageCeremonyPage'
-import SpiritAnimalIntroductionPage from './pages/SpiritAnimalIntroductionPage'
-import DivorceCeremonyPage from './pages/DivorceCeremonyPage'
-import BubbleTeaMethodPage from './pages/BubbleTeaMethodPage'
 import WhatIsBubbleTeaPage from './pages/WhatIsBubbleTeaPage'
-import HowToSenseEnergyPage from './pages/HowToSenseEnergyPage'
-import DemagnetizingBubbleTeaPage from './pages/DemagnetizingBubbleTeaPage'
 
 function App() {
   return (
@@ -42,6 +45,9 @@ function App() {
           <Route path="/what-is-bubble-tea" element={<WhatIsBubbleTeaPage />} />
           <Route path="/how-to-sense-energy" element={<HowToSenseEnergyPage />} />
           <Route path="/demagnetizing-bubble-tea" element={<DemagnetizingBubbleTeaPage />} />
+          <Route path="/dharma" element={<DharmaDeclarationPage />} />
+          <Route path="/video" element={<EnlightenmentVideoPage />} />
+          <Route path="/testimonials" element={<BelieverTestimonialsPage />} />
         </Routes>
       </BaseLayout>
     </Router>
