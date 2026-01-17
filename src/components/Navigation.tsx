@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 interface NavItem {
@@ -60,6 +60,24 @@ function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
   const [expandedSubmenu, setExpandedSubmenu] = useState<string | null>(null)
+  const submenuRef = useRef<HTMLDivElement>(null)
+
+  // Close submenu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (submenuRef.current && !submenuRef.current.contains(event.target as Node)) {
+        setOpenSubmenu(null)
+      }
+    }
+
+    if (openSubmenu) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [openSubmenu])
 
   return (
     <nav className="sticky top-0 z-50 glass-card border-b border-white/10">
@@ -76,35 +94,57 @@ function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8" ref={submenuRef}>
             {navItems.map((item) => (
               <div
                 key={item.key}
                 className="relative"
-                onMouseEnter={() => item.subItems && setOpenSubmenu(item.key)}
-                onMouseLeave={() => setOpenSubmenu(null)}
               >
                 {item.path ? (
-                  <Link
-                    to={item.path}
+                  <div className="flex items-center space-x-1">
+                    <Link
+                      to={item.path}
+                      className="text-sm font-medium text-gray-300 hover:text-accent transition-colors duration-200"
+                    >
+                      <span>{item.label}</span>
+                    </Link>
+                    {item.subItems && (
+                      <button
+                        onClick={() => setOpenSubmenu(openSubmenu === item.key ? null : item.key)}
+                        className="text-sm font-medium text-gray-300 hover:text-accent transition-colors duration-200 p-1"
+                        aria-label={openSubmenu === item.key ? 'Close submenu' : 'Open submenu'}
+                      >
+                        <motion.svg
+                          animate={{ rotate: openSubmenu === item.key ? 180 : 0 }}
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </motion.svg>
+                      </button>
+                    )}
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => item.subItems && setOpenSubmenu(openSubmenu === item.key ? null : item.key)}
                     className="text-sm font-medium text-gray-300 hover:text-accent transition-colors duration-200 flex items-center space-x-1"
+                    aria-label={openSubmenu === item.key ? 'Close submenu' : 'Open submenu'}
                   >
                     <span>{item.label}</span>
                     {item.subItems && (
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <motion.svg
+                        animate={{ rotate: openSubmenu === item.key ? 180 : 0 }}
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
+                      </motion.svg>
                     )}
-                  </Link>
-                ) : (
-                  <span className="text-sm font-medium text-gray-300 flex items-center space-x-1">
-                    <span>{item.label}</span>
-                    {item.subItems && (
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    )}
-                  </span>
+                  </button>
                 )}
                 
                 {/* Submenu Dropdown */}
@@ -113,22 +153,19 @@ function Navigation() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 pt-2 w-48 z-50"
-                    onMouseEnter={() => setOpenSubmenu(item.key)}
-                    onMouseLeave={() => setOpenSubmenu(null)}
+                    className="absolute top-full left-0 mt-2 w-48 glass-card rounded-lg shadow-xl border border-white/20 overflow-hidden z-50"
                   >
-                    <div className="glass-card rounded-lg shadow-xl border border-white/20 overflow-hidden">
-                      <div className="py-2">
-                        {item.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.key}
-                            to={subItem.path!}
-                            className="block px-4 py-2 text-sm text-gray-300 hover:text-accent hover:bg-white/5 transition-colors duration-200"
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
-                      </div>
+                    <div className="py-2">
+                      {item.subItems.map((subItem) => (
+                        <Link
+                          key={subItem.key}
+                          to={subItem.path!}
+                          onClick={() => setOpenSubmenu(null)}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-accent hover:bg-white/5 transition-colors duration-200"
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
                     </div>
                   </motion.div>
                 )}
