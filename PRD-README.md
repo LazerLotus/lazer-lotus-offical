@@ -32,7 +32,6 @@ Transform the existing Weebly-based blog into a modern, futuristic static websit
   - Primary: Deep space/navy blues, gradient backgrounds
   - Accent: **Neon/cyan green** (representing "lazer" theme - primary brand color)
   - Neutral: White, off-white, subtle grays
-  - Dark mode preferred with light mode option
 
 ### Design Principles
 1. **Minimalism:** Clean layouts with generous whitespace
@@ -161,22 +160,17 @@ lazer-lotus-offical/
    - Smooth fade/slide transitions between pages
    - Loading states (optional)
 
-3. **Dark Mode Toggle**
-   - System preference detection
-   - Manual toggle switch
-   - Smooth theme transitions
-
-4. **Scroll Animations**
+3. **Scroll Animations**
    - Fade-in on scroll
    - Parallax effects (subtle)
    - Progressive image loading
 
-5. **Interactive Elements**
+4. **Interactive Elements**
    - Hover effects on cards/buttons
    - Gradient text effects
    - Glassmorphic cards
 
-6. **Performance**
+5. **Performance**
    - Lazy loading images
    - Optimized assets
    - Minimal JavaScript
@@ -282,21 +276,40 @@ Value: your-username.github.io
 ## 🔧 Development Phases
 
 ### Phase 1: Foundation (Week 1)
-- [ ] Set up project structure with chosen tech stack
-- [ ] Configure build tools and deployment
-- [ ] Implement base layout and navigation
-- [ ] Set up Tailwind CSS with custom theme
-- [ ] Create reusable components (Button, Card, etc.)
+- [x] Set up project structure with chosen tech stack
+- [x] Configure build tools and deployment
+- [x] Implement base layout and navigation
+- [x] Set up Tailwind CSS with custom theme
+- [x] Create reusable components (Button, Card, etc.)
 
 ### Phase 2: Content Migration (Week 1-2)
-- [ ] Recreate homepage with hero section
+- [x] Recreate homepage with hero section
 - [ ] Build all main section pages
-- [ ] Migrate existing content
-- [ ] Implement responsive layouts
+- [ ] Migrate existing content:
+  - [ ] **了解妙雷 (Understanding the Teachings)** - Main landing page with overview
+    - [ ] 本教宗旨 (Religious Principles) - Sub-page/section
+    - [ ] 雷射蓮花 (Lazer Lotus) - Sub-page/section
+    - [ ] 雷射師父 (Lazer Master) - Sub-page/section
+  - [ ] **功德靈獸 (Merit Spirit Animals)** - Main page with spirit animals overview
+    - [ ] 靈性猴 (Spiritual Monkey) - Sub-page/section
+    - [ ] 大宇宙大智慧大刺蝟 (Great Universe Great Wisdom Great Hedgehog) - Sub-page/section
+    - [ ] 靈性鵜鶘 (Spiritual Pelican) - Sub-page/section
+  - [ ] **妙雷宗婚禮儀式 (Wedding Ceremonies)** - Main wedding ceremonies page
+    - [ ] 緒論 (Introduction) - Sub-page/section
+    - [ ] 結婚儀式 (Marriage Ceremony) - Sub-page/section
+    - [ ] 靈性動物介紹 (Spirit Animal Introductions) - Sub-page/section
+    - [ ] 離婚儀式 (Divorce Ceremony) - Sub-page/section
+  - [ ] **手搖杯改運法 (Bubble Tea Fortune Method)** - Main bubble tea method page
+    - [ ] 何謂手搖杯 (What is Bubble Tea) - Sub-page/section
+    - [ ] 如何感應手搖杯能量 (How to Sense Bubble Tea Energy) - Sub-page/section
+    - [ ] 讓手搖杯消磁 (Demagnetizing Bubble Tea) - Sub-page/section
+  - [ ] **法枯謁 (Dharma Declaration)** - Single page
+  - [ ] **了凡視訊 (Enlightenment Video)** - Video page/section
+  - [ ] **信徒見證 (Believer Testimonials)** - Testimonials page
+- [x] Implement responsive layouts
 
 ### Phase 3: Enhancements (Week 2)
 - [ ] Add animations and transitions
-- [ ] Implement dark mode
 - [ ] Add scroll animations
 - [ ] Optimize images and assets
 
@@ -468,9 +481,8 @@ The project will be considered complete when:
 2. ✅ Site loads in < 2 seconds on 3G connection
 3. ✅ Responsive on mobile, tablet, and desktop
 4. ✅ Custom domain is properly configured and working
-5. ✅ Dark mode is functional
-6. ✅ Smooth animations and transitions throughout
-7. ✅ Lighthouse scores 90+ across all categories
+5. ✅ Smooth animations and transitions throughout
+6. ✅ Lighthouse scores 90+ across all categories
 8. ✅ Code is clean, documented, and follows best practices
 9. ✅ Site matches futuristic tech aesthetic
 10. ✅ All pages are accessible and navigable
