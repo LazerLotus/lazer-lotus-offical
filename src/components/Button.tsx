@@ -1,11 +1,15 @@
-import { ReactNode, ButtonHTMLAttributes } from 'react'
-import { motion } from 'framer-motion'
+import { motion, MotionProps } from 'framer-motion'
+import { ReactNode } from 'react'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<MotionProps, 'className' | 'onDrag' | 'onDragEnd' | 'onDragStart'> {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
+  className?: string
+  disabled?: boolean
+  type?: 'button' | 'submit' | 'reset'
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const variants = {
