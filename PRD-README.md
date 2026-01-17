@@ -303,9 +303,9 @@ Value: your-username.github.io
     - [x] 何謂手搖杯 (What is Bubble Tea) - Sub-page/section
     - [x] 如何感應手搖杯能量 (How to Sense Bubble Tea Energy) - Sub-page/section
     - [x] 讓手搖杯消磁 (Demagnetizing Bubble Tea) - Sub-page/section
-  - [ ] **法枯謁 (Dharma Declaration)** - Single page
-  - [ ] **了凡視訊 (Enlightenment Video)** - Video page/section
-  - [ ] **信徒見證 (Believer Testimonials)** - Testimonials page
+  - [x] **法枯謁 (Dharma Declaration)** - Single page
+  - [x] **了凡視訊 (Enlightenment Video)** - Video page/section
+  - [x] **信徒見證 (Believer Testimonials)** - Testimonials page
 - [x] Implement responsive layouts
 
 ### Phase 3: Enhancements (Week 2)
