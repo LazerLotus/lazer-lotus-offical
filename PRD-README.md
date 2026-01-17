@@ -290,10 +290,10 @@ Value: your-username.github.io
     - [x] 本教宗旨 (Religious Principles) - Sub-page/section
     - [x] 雷射蓮花 (Lazer Lotus) - Sub-page/section
     - [x] 雷射師父 (Lazer Master) - Sub-page/section
-  - [ ] **功德靈獸 (Merit Spirit Animals)** - Main page with spirit animals overview
-    - [ ] 靈性猴 (Spiritual Monkey) - Sub-page/section
-    - [ ] 大宇宙大智慧大刺蝟 (Great Universe Great Wisdom Great Hedgehog) - Sub-page/section
-    - [ ] 靈性鵜鶘 (Spiritual Pelican) - Sub-page/section
+  - [x] **功德靈獸 (Merit Spirit Animals)** - Main page with spirit animals overview
+    - [x] 靈性猴 (Spiritual Monkey) - Sub-page/section
+    - [x] 大宇宙大智慧大刺蝟 (Great Universe Great Wisdom Great Hedgehog) - Sub-page/section
+    - [x] 靈性鵜鶘 (Spiritual Pelican) - Sub-page/section
   - [ ] **妙雷宗婚禮儀式 (Wedding Ceremonies)** - Main wedding ceremonies page
     - [ ] 緒論 (Introduction) - Sub-page/section
     - [ ] 結婚儀式 (Marriage Ceremony) - Sub-page/section
