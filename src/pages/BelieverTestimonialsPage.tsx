@@ -1,14 +1,23 @@
-import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
+import { Helmet } from 'react-helmet-async'
 import Card from '../components/Card'
 
 function BelieverTestimonialsPage() {
+  // Helper function to render stars (filled + empty = 5 total)
+  const renderStars = (rating: number) => {
+    const filled = '★'
+    const empty = '☆'
+    return filled.repeat(rating) + empty.repeat(5 - rating)
+  }
+
   // Mock testimonial cards template for future use
   const testimonialTemplate = {
     name: '信徒姓名',
     date: '2024年',
     content: '在此輸入信徒見證內容...',
-    starRating: '★★★',
+    rating: 5, // 1-5 stars
+    image: '/images/testimonial-placeholder.jpg', // Placeholder path for profile image
+    contentImages: ['/images/testimony-photo-1.jpg'], // Array of images to show in content
   }
 
   return (
@@ -97,32 +106,74 @@ function BelieverTestimonialsPage() {
               {/* Mock testimonial card template - can be replaced with actual testimonials later */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-50">
                 <Card hover className="relative">
-                  <div className="absolute top-4 right-4 text-accent font-bold text-sm">
-                    {testimonialTemplate.starRating}
+                  <div className="absolute top-4 right-4 text-accent font-bold text-lg">
+                    {renderStars(testimonialTemplate.rating)}
                   </div>
-                  <div className="pr-12">
-                    <h3 className="text-lg font-semibold text-gray-100 mb-2">
-                      {testimonialTemplate.name}
-                    </h3>
-                    <p className="text-sm text-gray-400 mb-4">{testimonialTemplate.date}</p>
-                    <p className="text-gray-300 italic">
+                  <div className="pr-20">
+                    <div className="flex items-start space-x-4 mb-4">
+                      {/* Image placeholder */}
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gray-700 border-2 border-accent/30 flex items-center justify-center overflow-hidden">
+                        <span className="text-gray-500 text-2xl">📷</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                          {testimonialTemplate.name}
+                        </h3>
+                        <p className="text-sm text-gray-400">{testimonialTemplate.date}</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-300 italic leading-relaxed mb-4">
                       "{testimonialTemplate.content}"
                     </p>
+                    {/* Content images placeholder */}
+                    {testimonialTemplate.contentImages && testimonialTemplate.contentImages.length > 0 && (
+                      <div className="mt-4 space-y-2">
+                        {testimonialTemplate.contentImages.map((_img, idx) => (
+                          <div
+                            key={idx}
+                            className="w-full aspect-video bg-gray-800 border border-accent/30 rounded-lg flex items-center justify-center overflow-hidden"
+                          >
+                            <span className="text-gray-600 text-sm">見證照片 {idx + 1}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </Card>
 
                 <Card hover className="relative">
-                  <div className="absolute top-4 right-4 text-accent font-bold text-sm">
-                    {testimonialTemplate.starRating}
+                  <div className="absolute top-4 right-4 text-accent font-bold text-lg">
+                    {renderStars(4)}
                   </div>
-                  <div className="pr-12">
-                    <h3 className="text-lg font-semibold text-gray-100 mb-2">
-                      {testimonialTemplate.name}
-                    </h3>
-                    <p className="text-sm text-gray-400 mb-4">{testimonialTemplate.date}</p>
-                    <p className="text-gray-300 italic">
+                  <div className="pr-20">
+                    <div className="flex items-start space-x-4 mb-4">
+                      {/* Image placeholder */}
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gray-700 border-2 border-accent/30 flex items-center justify-center overflow-hidden">
+                        <span className="text-gray-500 text-2xl">📷</span>
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="text-lg font-semibold text-gray-100 mb-1">
+                          {testimonialTemplate.name}
+                        </h3>
+                        <p className="text-sm text-gray-400">{testimonialTemplate.date}</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-300 italic leading-relaxed mb-4">
                       "{testimonialTemplate.content}"
                     </p>
+                    {/* Content images placeholder */}
+                    {testimonialTemplate.contentImages && testimonialTemplate.contentImages.length > 0 && (
+                      <div className="mt-4 space-y-2">
+                        {testimonialTemplate.contentImages.map((_img, idx) => (
+                          <div
+                            key={idx}
+                            className="w-full aspect-video bg-gray-800 border border-accent/30 rounded-lg flex items-center justify-center overflow-hidden"
+                          >
+                            <span className="text-gray-600 text-sm">見證照片 {idx + 1}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </Card>
               </div>
