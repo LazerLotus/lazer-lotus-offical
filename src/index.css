@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  
   body {
     @apply bg-space-950 text-gray-100 font-sans antialiased;
     @apply dark:bg-space-950 dark:text-gray-100;
