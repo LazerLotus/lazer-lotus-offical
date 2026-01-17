@@ -20,7 +20,16 @@ const navItems: NavItem[] = [
       { label: '雷射師父', path: '/lazer-master', key: 'lazer-master' },
     ],
   },
-  { label: '功德靈獸', path: '/spirit-animals', key: 'animals' },
+  {
+    label: '功德靈獸',
+    path: '/spirit-animals',
+    key: 'animals',
+    subItems: [
+      { label: '靈性猴', path: '/spiritual-monkey', key: 'monkey' },
+      { label: '大宇宙大智慧大刺蝟', path: '/great-universe-hedgehog', key: 'hedgehog' },
+      { label: '靈性鵜鶘', path: '/spiritual-pelican', key: 'pelican' },
+    ],
+  },
   { label: '婚禮儀式', path: '/wedding', key: 'wedding' },
   { label: '手搖杯改運法', path: '/bubble-tea', key: 'bubble-tea' },
   { label: '法枯謁', path: '/dharma', key: 'dharma' },

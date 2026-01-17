@@ -5,6 +5,10 @@ import UnderstandingTeachingsPage from './pages/UnderstandingTeachingsPage'
 import ReligiousPrinciplesPage from './pages/ReligiousPrinciplesPage'
 import LazerLotusPage from './pages/LazerLotusPage'
 import LazerMasterPage from './pages/LazerMasterPage'
+import SpiritAnimalsPage from './pages/SpiritAnimalsPage'
+import SpiritualMonkeyPage from './pages/SpiritualMonkeyPage'
+import GreatUniverseHedgehogPage from './pages/GreatUniverseHedgehogPage'
+import SpiritualPelicanPage from './pages/SpiritualPelicanPage'
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
           <Route path="/religious-principles" element={<ReligiousPrinciplesPage />} />
           <Route path="/lazer-lotus" element={<LazerLotusPage />} />
           <Route path="/lazer-master" element={<LazerMasterPage />} />
+          <Route path="/spirit-animals" element={<SpiritAnimalsPage />} />
+          <Route path="/spiritual-monkey" element={<SpiritualMonkeyPage />} />
+          <Route path="/great-universe-hedgehog" element={<GreatUniverseHedgehogPage />} />
+          <Route path="/spiritual-pelican" element={<SpiritualPelicanPage />} />
         </Routes>
       </BaseLayout>
     </Router>
