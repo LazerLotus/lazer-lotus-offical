@@ -1,0 +1,35 @@
+# Optional: GitHub Actions workflow (alternative to Cloudflare Pages automatic deployments)
+# Cloudflare Pages has built-in CI/CD, but this is here if you want additional automation
+
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: Build
+        run: yarn build
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist/
