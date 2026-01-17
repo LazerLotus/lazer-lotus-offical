@@ -113,18 +113,22 @@ function Navigation() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 mt-2 w-48 glass-card rounded-lg shadow-xl border border-white/20 overflow-hidden z-50"
+                    className="absolute top-full left-0 pt-2 w-48 z-50"
+                    onMouseEnter={() => setOpenSubmenu(item.key)}
+                    onMouseLeave={() => setOpenSubmenu(null)}
                   >
-                    <div className="py-2">
-                      {item.subItems.map((subItem) => (
-                        <Link
-                          key={subItem.key}
-                          to={subItem.path!}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-accent hover:bg-white/5 transition-colors duration-200"
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
+                    <div className="glass-card rounded-lg shadow-xl border border-white/20 overflow-hidden">
+                      <div className="py-2">
+                        {item.subItems.map((subItem) => (
+                          <Link
+                            key={subItem.key}
+                            to={subItem.path!}
+                            className="block px-4 py-2 text-sm text-gray-300 hover:text-accent hover:bg-white/5 transition-colors duration-200"
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </motion.div>
                 )}

@@ -44,7 +44,6 @@ function Footer() {
 
         <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
           <p>&copy; {currentYear} 妙法無邊雷射蓮花. All rights reserved.</p>
-          <p className="mt-2 text-xs">This is a parody website for entertainment purposes.</p>
         </div>
       </div>
     </footer>

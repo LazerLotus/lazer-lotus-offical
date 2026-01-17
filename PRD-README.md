@@ -284,7 +284,7 @@ Value: your-username.github.io
 
 ### Phase 2: Content Migration (Week 1-2)
 - [x] Recreate homepage with hero section
-- [ ] Build all main section pages
+- [x] Build all main section pages
 - [ ] Migrate existing content:
   - [x] **了解妙雷 (Understanding the Teachings)** - Main landing page with overview
     - [x] 本教宗旨 (Religious Principles) - Sub-page/section
