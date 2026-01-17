@@ -14,6 +14,10 @@ import WeddingIntroductionPage from './pages/WeddingIntroductionPage'
 import MarriageCeremonyPage from './pages/MarriageCeremonyPage'
 import SpiritAnimalIntroductionPage from './pages/SpiritAnimalIntroductionPage'
 import DivorceCeremonyPage from './pages/DivorceCeremonyPage'
+import BubbleTeaMethodPage from './pages/BubbleTeaMethodPage'
+import WhatIsBubbleTeaPage from './pages/WhatIsBubbleTeaPage'
+import HowToSenseEnergyPage from './pages/HowToSenseEnergyPage'
+import DemagnetizingBubbleTeaPage from './pages/DemagnetizingBubbleTeaPage'
 
 function App() {
   return (
@@ -34,6 +38,10 @@ function App() {
           <Route path="/marriage-ceremony" element={<MarriageCeremonyPage />} />
           <Route path="/spirit-animal-introduction" element={<SpiritAnimalIntroductionPage />} />
           <Route path="/divorce-ceremony" element={<DivorceCeremonyPage />} />
+          <Route path="/bubble-tea" element={<BubbleTeaMethodPage />} />
+          <Route path="/what-is-bubble-tea" element={<WhatIsBubbleTeaPage />} />
+          <Route path="/how-to-sense-energy" element={<HowToSenseEnergyPage />} />
+          <Route path="/demagnetizing-bubble-tea" element={<DemagnetizingBubbleTeaPage />} />
         </Routes>
       </BaseLayout>
     </Router>

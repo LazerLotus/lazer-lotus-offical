@@ -41,7 +41,16 @@ const navItems: NavItem[] = [
       { label: '離婚儀式', path: '/divorce-ceremony', key: 'divorce' },
     ],
   },
-  { label: '手搖杯改運法', path: '/bubble-tea', key: 'bubble-tea' },
+  {
+    label: '手搖杯改運法',
+    path: '/bubble-tea',
+    key: 'bubble-tea',
+    subItems: [
+      { label: '何謂手搖杯', path: '/what-is-bubble-tea', key: 'what-is-bubble-tea' },
+      { label: '如何感應手搖杯能量', path: '/how-to-sense-energy', key: 'sense-energy' },
+      { label: '讓手搖杯消磁', path: '/demagnetizing-bubble-tea', key: 'demagnetize' },
+    ],
+  },
   { label: '法枯謁', path: '/dharma', key: 'dharma' },
   { label: '了凡視訊', path: '/video', key: 'video' },
   { label: '信徒見證', path: '/testimonials', key: 'testimonials' },
