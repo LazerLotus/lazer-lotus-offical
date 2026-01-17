@@ -30,7 +30,17 @@ const navItems: NavItem[] = [
       { label: '靈性鵜鶘', path: '/spiritual-pelican', key: 'pelican' },
     ],
   },
-  { label: '婚禮儀式', path: '/wedding', key: 'wedding' },
+  {
+    label: '婚禮儀式',
+    path: '/wedding',
+    key: 'wedding',
+    subItems: [
+      { label: '緒論', path: '/wedding-introduction', key: 'wedding-intro' },
+      { label: '結婚儀式', path: '/marriage-ceremony', key: 'marriage' },
+      { label: '靈性動物介紹', path: '/spirit-animal-introduction', key: 'spirit-animal-intro' },
+      { label: '離婚儀式', path: '/divorce-ceremony', key: 'divorce' },
+    ],
+  },
   { label: '手搖杯改運法', path: '/bubble-tea', key: 'bubble-tea' },
   { label: '法枯謁', path: '/dharma', key: 'dharma' },
   { label: '了凡視訊', path: '/video', key: 'video' },

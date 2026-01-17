@@ -9,6 +9,11 @@ import SpiritAnimalsPage from './pages/SpiritAnimalsPage'
 import SpiritualMonkeyPage from './pages/SpiritualMonkeyPage'
 import GreatUniverseHedgehogPage from './pages/GreatUniverseHedgehogPage'
 import SpiritualPelicanPage from './pages/SpiritualPelicanPage'
+import WeddingCeremoniesPage from './pages/WeddingCeremoniesPage'
+import WeddingIntroductionPage from './pages/WeddingIntroductionPage'
+import MarriageCeremonyPage from './pages/MarriageCeremonyPage'
+import SpiritAnimalIntroductionPage from './pages/SpiritAnimalIntroductionPage'
+import DivorceCeremonyPage from './pages/DivorceCeremonyPage'
 
 function App() {
   return (
@@ -24,6 +29,11 @@ function App() {
           <Route path="/spiritual-monkey" element={<SpiritualMonkeyPage />} />
           <Route path="/great-universe-hedgehog" element={<GreatUniverseHedgehogPage />} />
           <Route path="/spiritual-pelican" element={<SpiritualPelicanPage />} />
+          <Route path="/wedding" element={<WeddingCeremoniesPage />} />
+          <Route path="/wedding-introduction" element={<WeddingIntroductionPage />} />
+          <Route path="/marriage-ceremony" element={<MarriageCeremonyPage />} />
+          <Route path="/spirit-animal-introduction" element={<SpiritAnimalIntroductionPage />} />
+          <Route path="/divorce-ceremony" element={<DivorceCeremonyPage />} />
         </Routes>
       </BaseLayout>
     </Router>
