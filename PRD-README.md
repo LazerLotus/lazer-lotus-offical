@@ -286,10 +286,10 @@ Value: your-username.github.io
 - [x] Recreate homepage with hero section
 - [ ] Build all main section pages
 - [ ] Migrate existing content:
-  - [ ] **了解妙雷 (Understanding the Teachings)** - Main landing page with overview
-    - [ ] 本教宗旨 (Religious Principles) - Sub-page/section
-    - [ ] 雷射蓮花 (Lazer Lotus) - Sub-page/section
-    - [ ] 雷射師父 (Lazer Master) - Sub-page/section
+  - [x] **了解妙雷 (Understanding the Teachings)** - Main landing page with overview
+    - [x] 本教宗旨 (Religious Principles) - Sub-page/section
+    - [x] 雷射蓮花 (Lazer Lotus) - Sub-page/section
+    - [x] 雷射師父 (Lazer Master) - Sub-page/section
   - [ ] **功德靈獸 (Merit Spirit Animals)** - Main page with spirit animals overview
     - [ ] 靈性猴 (Spiritual Monkey) - Sub-page/section
     - [ ] 大宇宙大智慧大刺蝟 (Great Universe Great Wisdom Great Hedgehog) - Sub-page/section

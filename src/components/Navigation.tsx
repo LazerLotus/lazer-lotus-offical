@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const navItems = [
-  { label: '了解妙雷', path: '/', key: 'about' },
+  { label: '了解妙雷', path: '/understanding-teachings', key: 'about' },
   { label: '功德靈獸', path: '/spirit-animals', key: 'animals' },
   { label: '婚禮儀式', path: '/wedding', key: 'wedding' },
   { label: '手搖杯改運法', path: '/bubble-tea', key: 'bubble-tea' },

@@ -58,7 +58,7 @@ function HomePage() {
               您的聲音，妙雷聽見了！
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/about">
+              <Link to="/understanding-teachings">
                 <Button size="lg" className="min-w-[200px]">
                   馬上了解
                 </Button>
