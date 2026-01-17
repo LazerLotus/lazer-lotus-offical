@@ -294,11 +294,11 @@ Value: your-username.github.io
     - [x] 靈性猴 (Spiritual Monkey) - Sub-page/section
     - [x] 大宇宙大智慧大刺蝟 (Great Universe Great Wisdom Great Hedgehog) - Sub-page/section
     - [x] 靈性鵜鶘 (Spiritual Pelican) - Sub-page/section
-  - [ ] **妙雷宗婚禮儀式 (Wedding Ceremonies)** - Main wedding ceremonies page
-    - [ ] 緒論 (Introduction) - Sub-page/section
-    - [ ] 結婚儀式 (Marriage Ceremony) - Sub-page/section
-    - [ ] 靈性動物介紹 (Spirit Animal Introductions) - Sub-page/section
-    - [ ] 離婚儀式 (Divorce Ceremony) - Sub-page/section
+  - [x] **妙雷宗婚禮儀式 (Wedding Ceremonies)** - Main wedding ceremonies page
+    - [x] 緒論 (Introduction) - Sub-page/section
+    - [x] 結婚儀式 (Marriage Ceremony) - Sub-page/section
+    - [x] 靈性動物介紹 (Spirit Animal Introductions) - Sub-page/section
+    - [x] 離婚儀式 (Divorce Ceremony) - Sub-page/section
   - [ ] **手搖杯改運法 (Bubble Tea Fortune Method)** - Main bubble tea method page
     - [ ] 何謂手搖杯 (What is Bubble Tea) - Sub-page/section
     - [ ] 如何感應手搖杯能量 (How to Sense Bubble Tea Energy) - Sub-page/section
